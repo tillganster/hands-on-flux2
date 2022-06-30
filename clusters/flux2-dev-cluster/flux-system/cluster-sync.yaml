@@ -52,6 +52,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ../examples/applications
+  path: ../../../examples/applications
   prune: true
   validation: client
