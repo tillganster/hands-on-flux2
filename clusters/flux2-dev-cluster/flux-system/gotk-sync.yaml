@@ -13,6 +13,7 @@ spec:
     name: flux-system
   url: ssh://git@github.com/tillganster/hands-on-flux2
 ---
+# this is the main part of bringing smth into cluster
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
@@ -20,6 +21,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
+  # specifies which path to watch
+  #
   path: ./clusters/flux2-dev-cluster
   prune: true
   sourceRef:
